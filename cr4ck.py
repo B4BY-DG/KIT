@@ -2,6 +2,24 @@
 #!/usr/bin/python2
 #This Script Write By Tech Baba
 #Do Not Copy This Script :)
+##### LOGO #####
+logo2 = """
+\033[1;93m███╗░░░███╗░█████╗░██████╗░███╗░░░███╗██╗░░░██╗     
+\033[1;93m████╗░████║██╔══██╗██╔══██╗████╗░████║██║░░░██║    
+\033[1;92m██╔████╔██║███████║██████╔╝██╔████╔██║██║░░░██║    
+\033[1;92m██║╚██╔╝██║██╔══██║██╔══██╗██║╚██╔╝██║██║░░░██║      
+\033[1;91m██║░╚═╝░██║██║░░██║██║░░██║██║░╚═╝░██║╚██████╔╝      
+\033[1;91m╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░╚═════╝░      
+\033[1;95m-------------------- \033[1;94mNew Version 1.0------------------➤  
+\033[1;91m.                   TERMUX MY4NM4R TEAM　 
+\033[1;97m.　                  Brand: B4BY DR4GON
+\033[1;95m.                  　 Creation: M4RMU
+\033[1;96m.                   тεcнησℓσgү вү мαямυ
+\033[1;92m.                                        B4BY
+\033[1;92m.                                             DR4G0N
+\033[1;95m------------------------- \033[1;93mM4RMU -----------------------➤
+"""
+
 try:
     import os
     import sys
@@ -29,13 +47,13 @@ def home(): #main menu
     baba(" Updating Çommand")
     os.system("clear")
     arm = platform.architecture()[0] #Checking arm
-    print logo #raw
+    print logo2 #raw
     print 47*("-")
     print('Your Device Is \033[0;92m'+arm).center(45)  #Show Raw
     print 47*("\033[0;97m-")
     baba("\tUpdateing => ")
     os.system("clear")
-    print logo
+    print logo2
     device = platform.architecture()[0]
     if device == '64bit':
         from libmainrdx import x_x_x_home_x_x_x
