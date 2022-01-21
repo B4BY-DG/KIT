@@ -298,7 +298,7 @@ def login_fb():
 			time.sleep(1)
 			login()
 
-def mnu():
+def menu():
 
     global token
 
