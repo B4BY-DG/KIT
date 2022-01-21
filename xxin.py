@@ -298,7 +298,7 @@ def login_fb():
 			time.sleep(1)
 			login()
 
-def menu():
+def mnu():
 
     global token
 
@@ -366,6 +366,7 @@ def menu():
     pilih()
 
 def menu():
+        global token
 	os.system('clear')
 	try:
 		toket=open('login.txt','r').read()
