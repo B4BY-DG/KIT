@@ -313,46 +313,19 @@ def mnu():
     except (KeyError , IOError):
 
         login()
-
     try:
-
-        r = requests.get("https://graph.facebook.com/me?access_token="+token)
-
+        r = requests.get('https://graph.facebook.com/me?access_token=' + token, headers=header)
         q = json.loads(r.text)
-
-        nm = q["name"]
-
-        nmf = nm.rsplit(" ")[0]
-
-        ok = nmf
-
-    except (KeyError , IOError):
-
-        print("")
-
-        print("\033[1;91mlogin account has checkpoint").center(50)
-
-        print("")
-
-        os.system("rm -rf .fb_token.txt")
-
-        time.sleep(1)
-
-        login()
-
-    except requests.exceptions.ConnectionError:
-
+        name = q['name']
+    except KeyError:
         print logo
-
-        print("")
-
-        print("\033[1;91mYour internet connection failed").center(50)
-
-        print("")
-
-        time.sleep(2)
-
-        menu()
+        print ''
+        print '\tLogged in token has expired'
+        os.system('rm -rf access_token.txt')
+        print ''
+        time.sleep(1)
+        login()
+        
 
     os.system('clear')         
         
