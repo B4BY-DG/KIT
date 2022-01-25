@@ -49,8 +49,9 @@ def logo():
 
 def main():
 	os.system("clear")
-        os.system("toilet -F gay -f slant M A R M U")
-        linex()
+        os.system("toilet -f lean M A R M U")
+       
+
 	logo()
 	print("\t\033[93;1m      MAIN MENU\x1b[0m")
 	print("")
