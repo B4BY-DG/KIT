@@ -42,11 +42,14 @@ loc = requests.get('https://ipapi.com/ip_api.php?ip=' + ip, headers={'Referer': 
 	
 def linex():
 	os.system('echo  "\n ======================================\n" | lolcat -a -d 2 -s 50')
+
 def logo():
 	os.system('echo "\n             _______      ________  ___  _______ __\n            / __/ _ )____/ ___/ _ \/ _ |/ ___/ //_/\n           / _// _  /___/ /__/ , _/ __ / /__/ ,< \n          /_/ /____/    \___/_/|_/_/ |_\___/_/|_|\n\n                 Modifying By : MarMu\n\n──❖ ── ✦ ── ✪ ── ✶⊶⊷⊶⊷❍ ✙ ᗰᗩᖇᗰᑌ ✙❍⊶⊷⊶⊷✶ ── ✪ ── ✦ ── ❖──"| lolcat -a -d 2 -s 50')	
 
 def main():
 	os.system("clear")
+        os.system("toilet -F gay -f slant M A R M U")
+        linex()
 	logo()
 	print("\t\033[93;1m      MAIN MENU\x1b[0m")
 	print("")
