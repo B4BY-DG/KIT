@@ -49,7 +49,7 @@ def logo():
 
 def main():
 	os.system("clear")
-        os.system("toilet -f lean M A R M U")
+        os.system("toilet -F gay -f lean MARMU")
        
 
 	logo()
