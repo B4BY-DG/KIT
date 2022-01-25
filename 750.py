@@ -41,6 +41,8 @@ ip = requests.get('https://api.ipify.org').text.strip()
 loc = requests.get('https://ipapi.com/ip_api.php?ip=' + ip, headers={'Referer': 'https://ip-api.com/', 'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'Mozilla/5.0 (Linux; Android 7.1.2; Redmi 4X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.92 Mobile Safari/537.36'}).json()['country_name'].upper()
 	
 def linex():
+	os.system('echo  "\n ======================================\n" | lolcat -a -d 2 -s 50')
+def logo():
 	os.system('echo "\n             _______      ________  ___  _______ __\n            / __/ _ )____/ ___/ _ \/ _ |/ ___/ //_/\n           / _// _  /___/ /__/ , _/ __ / /__/ ,< \n          /_/ /____/    \___/_/|_/_/ |_\___/_/|_|\n\n                 Modifying By : MarMu\n\n──❖ ── ✦ ── ✪ ── ✶⊶⊷⊶⊷❍ ✙ ᗰᗩᖇᗰᑌ ✙❍⊶⊷⊶⊷✶ ── ✪ ── ✦ ── ❖──"| lolcat -a -d 2 -s 50')	
 
 def main():
