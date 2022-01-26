@@ -335,7 +335,7 @@ def own():
     try:
         c = raw_input('\n\x1b[1;93m[\x1b[1;92m[ALIF]\033[1;93m] \x1b[1;93m[◈] \x1b[1;93mChoose Area Code:\x1b[1;98m')
         pass1 = raw_input('\x1b[1;93m[\x1b[1;92m[ALIF]\033[1;93m] \x1b[1;93m[◈] \x1b[1;97mEnter Your Password: \x1b[1;97m')
-        k = '+880'
+        k = '+959'
         idlist = '.txt'
         for line in open(idlist, 'r').readlines():
             id.append(line.strip())
