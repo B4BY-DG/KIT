@@ -148,7 +148,7 @@ logo2 = """
 \033[1;96m-----------------𝐅𝐋𝐀𝐌𝐄 𝐍𝐀𝐈𝐌-------------------------
 """
 
-Username="FLAME"
+CorrectUsername="FLAME"
 CorrectPasscode = "PAID"
 
 loop = 'true'
@@ -179,11 +179,12 @@ def login():
 
 def pilih_login():
     peak = raw_input("\n\033[1;95mAWAIS CHOOSE: \033[1;95m"
-    if peak =="0":
+    if peak =='':
         print "\x1b[1;95mFill In Correctly"
         pilih_login()
     elif peak =="1":
         Zeek()
+
 def Zeek():
     os.system('clear')
     print logo1
