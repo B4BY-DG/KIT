@@ -172,16 +172,14 @@ def lisensi():
 def login():
     os.system('clear')
     print logo1
-    print "\033[1;93m[1]\x1b[1;94mNAIM
-    Start cloning ( no login )"
+    print "\033[1;93m[1]\x1b[1;94mNAIM Start"    
     time.sleep(0.05)
-    print '\x1b[1;93m[0]\033[1;94m NAIM
-    Exit ( C u soon )'
+    print '\x1b[1;93m[0]\033[1;94m NAIM Exit ( C u soon )'
     pilih_login()
 
 def pilih_login():
     peak = raw_input("\n\033[1;95mAWAIS CHOOSE: \033[1;95m"
-    if peak =="":
+    if peak =="0":
         print "\x1b[1;95mFill In Correctly"
         pilih_login()
     elif peak =="1":
