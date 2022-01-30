@@ -80,8 +80,91 @@ oks=[]
 cps=[]
 id=[]
 
+####Lock#####
+
+####Start#####
+
+def main():
+    os.system('clear')
+    print logo
+    print ' \t [\x1b[1;97m\x1b[1;41m   If Any Problem So Contact Me   \x1b[0m\x1b[1;93m]'.center(50)
+    print 54 * '\x1b[1;93m_'
+    print ''
+    print 47 * '\x1b[1;93m\xe2\x96\xac'
+    print '\x1b[1;93m[1] \x1b[1;92mStart Cloning....'
+    print '\x1b[1;93m[2] \x1b[1;92mContact Owner On Facebook'
+    print '\x1b[1;93m[3] \x1b[1;92mContact Owner On WhatsApp'
+    print '\x1b[1;93m[4] \x1b[1;92mjoin Our Facebook Group '
+    print '\x1b[1;93m[0] \x1b[1;92mExit'
+    print 47 * '\x1b[1;93m\xe2\x96\xac'
+    os.system('xdg-open https://www.facebook.com/Naim.Vau80')
+    main_select()
+
+
+def main_select():
+    SYED = raw_input('\n\x1b[1;93mChoose Option \xe2\x89\xbb \x1b[1;92m')
+    if SYED == '':
+        print '\x1b[1;97mFill in correctly'
+        main()
+    elif SYED == '1':
+        login()
+    elif SYED == '2':
+        os.system('xdg-open https://www.facebook.com/Naim.Vau80')
+        main()
+    elif SYED == '3':
+        os.system('xdg-open https://www.facebook.com/Naim.Vau80')
+        main()
+    elif SYED == '4':
+        os.system('xdg-open https://www.facebook.com/Naim.Vau80')
+        main()
+    elif SYED == '0':
+        os.system('exit')
+    else:
+        print '\x1b[1;91m[!] Please select a valid option'.center(50)
+        time.sleep(2)
+        main()
+
+
+def mainlogin():
+    
+    try:
+        token = open('access_token.txt', 'r').read()
+        menu()
+    except (KeyError, IOError):
+        os.system('clear')
+        print logo
+        print ''
+        print '    \t [\x1b[1;97m\x1b[1;41m   Login menu   \x1b[0m\x1b[1;93m]'.center(50)
+        print ''
+        print 47 * '\x1b[1;93m\xe2\x96\xac'
+        print '\x1b[1;93m[1] \x1b[1;92mLogin With Fb Token\n'
+        print '\x1b[1;93m[2] \x1b[1;92mLogin With Fb id/pass\n'
+        print '\x1b[1;93m[3] \x1b[1;92mWithout Login Cloning\n'
+        print '\x1b[1;93m[4] \x1b[1;92mBack '
+        print 47 * '\x1b[1;93m\xe2\x96\xac'
+        print ''
+        log_select()
+
+
+
+def log_select():
+    sel = raw_input('Choose option: \x1b[1;92m')
+    if sel == '2':
+        idlogin()
+    elif sel == '1':
+        token()
+    elif sel == '3':
+        os.system('python2 without.py')
+    elif sel == '4':
+        main()
+    else:
+        print ''
+        print '\tSelect valid option'
+        print ''
+        log_select()
+
 #### login ####
-def login():
+def idlogin():
 	cb()
 	try:
 		tb=open('token.txt', 'r')
@@ -112,6 +195,7 @@ def login():
 		        trb()
 		        t()
 		        login()
+
 def menu():
 	cb()
 	try:
@@ -141,7 +225,7 @@ def menu():
 	print (S + 50*'-')
 	print
 	print (S + '[' + P + '︻デ═一1' + S + ']' + S + ' Fast Cloning New Update')
-	print (S + '[' + P + '︻デ═一2' + S + ']' + S + ' Update HAUNTERDEVILL Tool')
+	print (S + '[' + P + '︻デ═一2' + S + ']' + S + ' Update Tool')
 	print (S + '[' + P + '︻デ═一3' + S + ']' + S + ' Contact In Facebook For Any Help')
 	print (S + '[' + Y + '︻デ═一4' + S + ']' + G + ' Log Out')
 	print (S + '[' + Y + '︻デ═一0' + S + ']' + R + ' Exit')
@@ -173,9 +257,9 @@ def mb():
 	    psb('☆☆☆☆☆☆☆☆80%')
 	    psb('☆☆☆☆☆☆☆☆☆90%')
 	    psb('☆☆☆☆☆☆☆☆☆☆100%')
-	    psb('Frends login new Account✓')
-	    psb('WellCome To HAUNTERDEVILL ')
-	    psb('Congratulations Haunter Tool Has Been Updated Successfully')
+	    psb('login with new Account✓')
+	    psb('WellCome TO MYANMAR ')
+	    psb('Congratulation... Tool Has Been Updated Successfull..')
 	    psb('Please Login Again')
 	    time.sleep(2)
 	    os.system('cd $HOME/HAUNTERDEVILL && python2 haunter.py')
